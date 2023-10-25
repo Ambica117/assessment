@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="STYLE11.css">
+    <title>Register Form</title>
+    <link rel="icon" type="image/x-icon" href="a.png">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="card">
+        <div class="img-container"></div>
+
+        <div class="welcome">
+            <div class="oblique"></div>
+            <p>Welcome</p>
+        </div>
+
+        <form id="registrationForm">
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <div class="focused-line"></div>
+            </div>
+            <div class="form-control">
+                <label for="dept">Department</label>
+                <input type="text" id="dept" name="department" required>
+                <div class="focused-line"></div>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div class="focused-line"></div>
+            </div>
+            <div class="form-control">
+                <label for="no">Mobile Number</label>
+                <input type="text" id="no" name="mobile" required>
+                <div class="focused-line"></div>
+            </div>
+            <div class="form-control">
+                <label for="Year">Year:</label>
+                <select id="year" name="year" required>
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                </select>
+                <div class="focused-line"></div>
+            </div>
+
+            <div class="hi">
+                <label for="gender">Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label><br><br> 
+
+                <b>SELECT OPTION</b><br>
+                <input type="checkbox" id="event1" name="interests" value="Dance">
+                <label for="event1">Dance</label><br>
+                <input type="checkbox" id="event2" name="interests" value="Dance">
+                <label for="event2">Song</label><br>
+                <input type ="checkbox" id="event3" name="interests" value="Pooja">
+                <label for="event3">Pooja</label><br>
+                <input type="checkbox" id="event4" name="interests" value="Painting">
+                <label for="event4">Painting</label><br><br>
+            </div>
+
+            <!-- Add the reCAPTCHA widget here -->
+            <div class="g-recaptcha" data-sitekey="6LfHXcgoAAAAADUCd2_g_QwNlQjz9pKQJw_hDqzx"></div>
+        </form>
+
+        <a href="suc.htm" target="_blank"><button class="submit" onclick="registerUser()">Register</button></a>
+    </div>
+
+    <script>
+        function registerUser() {
+            // Your registration form submission logic here
+            // You can collect form data and send it to your server or perform other actions.
+            // For example:
+            var name = document.getElementById("name").value;
+            var department = document.getElementById("dept").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("no").value;
+            var year = document.getElementById("year").value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+
+            var selectedInterests = [];
+            var checkboxes = document.querySelectorAll('input[name="interests"]:checked');
+            for (var i = 0; i < checkboxes.length; i++) {
+                selectedInterests.push(checkboxes[i].value);
+            }
+
+            // You can send the data to your server or perform other actions here
+            console.log("Name: " + name);
+            console.log("Department: " + department);
+            console.log("Email: " + email);
+            console.log("Mobile: " + mobile);
+            console.log("Year: " + year);
+            console.log("Gender: " + gender);
+            console.log("Interests: " + selectedInterests);
+        }
+    </script>
+</body>
+</html>

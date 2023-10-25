@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+		/* Styling the body element like body color and margin */
+
+		body {
+			
+			margin: 10%;
+                       background-color: black;
+			
+		}
+div#C20-data {
+			background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh86Kwp8kGTzfVAk9X8mM8BvXWcHZvbOBfrV6npwU7-gPoGFa-zoxtXdmi0kJxTS4dEzg&usqp=CAU');
+                         background-repeat: no-repeat;
+                         background-attachment: fixed;
+                         background-size: cover;
+			box-shadow: 20px 20px 20px rgb(224, 165, 215);
+			font-family: Georgia;
+			padding: 25px 25px;
+			margin: 11px;
+			margin-top: 50px;
+		}
+h1.title-C20 {
+			font-size: 35px;
+			color: yellow;
+			text-align: center;
+			text-shadow: 5px 5px 10px black;
+		}
+        .btn{
+            align-content: center;
+   margin-top: 1rem;
+   display : inline-block;
+   padding: .8rem 3rem;
+   font-size: 1.7rem;
+   border-radius: .5rem;
+  background: #ee0d85;
+  color: #fff;
+  cursor: pointer;
+   font-weight: 600;
+}
+ 
+.btn:hover{
+   background-color: blue;
+}
+.container {
+            
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            
+        }
+</style>
+<link rel="icon" type="image/x-icon" href="a.png">
+</head>
+<body>
+	<main id="main">
+ <div id="C20-data">
+    <div class="calculator">
+        <h1 class="title-C20">Registration Fee Calculator</h1>
+       <link rel="stylesheet" type="text/css" href="calc.css">
+        <form id="billForm">
+            <label for="item">event Name:</label>
+            <input type="text" id="item" required>
+            <label for="price">Price (in $):</label>
+            <input type="number" id="price" required>
+            <label for="quantity">no of participants:</label>
+            <input type="number" id="quantity" required>
+            <button type="button" id="calculate">Add Item</button>
+        </form>
+        <div id="billDetails">
+            
+            <p id="itemList"></p>
+            
+        </div>
+    </div>
+    <script src="calc.js"></script>
+    <div class="container">
+    <a href="allt.htm" class="btn">Home </a>
+    </div>
+</div>
+
+
+</main>
+</body>
